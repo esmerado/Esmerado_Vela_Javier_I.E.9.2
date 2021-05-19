@@ -20,22 +20,23 @@
     <body>
 
         <div class="container">
-        <table>
+        <table class="table table-success table-striped table-bordered mt-3">
             <form method="get" action="modificarSocio.jsp">
+        	<tr class="text-center"><td colspan="2"><h3>Modificar Socio</h3></td></tr>
             <tr>
-                <td><input type="text" name="id_socio" value="<%= request.getParameter("id_socio") %>" readonly="true "></td>
+                <td>Id Socio</td><td><input type="text" name="id_socio" value="<%= request.getParameter("id_socio") %>" readonly="true "></td>
             </tr>
             <tr>
-                <td><input type="text" name="name" value="<%= request.getParameter("name") %>"></td>
+                <td>Name:</td><td><input type="text" name="name" value="<%= request.getParameter("name") %>"></td>
             </tr>
             <tr>
-                <td><input type="text" name="heigh" value="<%= request.getParameter("heigh") %>"></td>
+                <td>Heigh: </td><td><input type="text" name="heigh" value="<%= request.getParameter("heigh") %>"></td>
             </tr>
             <tr>
-                <td><input type="text" name="age" value="<%= request.getParameter("age") %>"></td>
+                <td>Age:</td><td><input type="text" name="age" value="<%= request.getParameter("age") %>"></td>
             </tr>
             <tr>
-                <td><input type="text" name="location" value="<%= request.getParameter("location") %>"></td>
+                <td>Location:</td><td><input type="text" name="location" value="<%= request.getParameter("location") %>"></td>
             </tr>
             <tr>
             	<div class="d-flex justify-content-center">
