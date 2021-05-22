@@ -1,12 +1,11 @@
 <%-- 
-    Document   : modificarSocio
-    Created on : 18 may 2021, 18:41:43
+    Document   : grabaSocio
+    Created on : 18 may 2021, 18:06:38
     Author     : esmer
 --%>
 
-<%@page import="javax.servlet.jsp.tagext.TryCatchFinally"%>
-<%@page import="java.sql.Statement"%>
 <%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Statement"%>
 <%@page import="java.sql.Connection"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -22,11 +21,11 @@
 	Statement s = conexion.createStatement();
 
 	try {
-		s.execute("Update socios set name = '" + request.getParameter("name") + "',heigh = " + request.getParameter("heigh")
-		+ ",age = " + request.getParameter("age") + ",location = '" + request.getParameter("location")
-		+ "' where id_socio = " + request.getParameter("id_socio"));
+		s.execute("INSERT INTO socios values(" + request.getParameter("id_socio") + ",'" + request.getParameter("name")
+		+ "','" + request.getParameter("heigh") + "','" + request.getParameter("age") + "','"
+		+ request.getParameter("location") + "')");
 	} catch (Exception e) {
-		System.err.print("Alguno de los valores son erróneos.");
+		System.err.print("Valor mal introducidos.");
 	}
 	%>
 </body>

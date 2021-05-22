@@ -31,7 +31,7 @@ and open the template in the editor.
 				<h2>Club de Baloncesto</h2>
 			</div>
 			<%
-				Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.jdbc.Driver");
 			Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/baloncesto", "root", "");
 			Statement s = conexion.createStatement();
 
@@ -49,7 +49,7 @@ and open the template in the editor.
 
 				</tr>
 
-				<form method="get" action="grabaSocio.jsp">
+				<form method="get" action="nuevoSocio.jsp">
 					<tr>
 						<td><input type="text" name="id_socio" size="5"></td>
 						<td><input type="text" name="name" size="5"></td>

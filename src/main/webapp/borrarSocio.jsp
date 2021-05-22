@@ -18,8 +18,12 @@
         <% Class.forName("com.mysql.jdbc.Driver");
 			Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/baloncesto", "root", "");
 			Statement s = conexion.createStatement(); 
-                        
+                        try{
+                        	
                         s.execute("Delete from socios where id_socio = " +request.getParameter("id_socio"));
+                        }catch(Exception e){
+                        	System.err.print("No se ha podido eliminar el socio.");
+                        }
         
         %>
     </body>
